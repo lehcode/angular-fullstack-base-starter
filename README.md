@@ -22,4 +22,4 @@ Before getting started, ensure that you have:
  - Docker installed
  - Basic knowledge of Docker, Node.js, and Yarn
 
-Follow the detailed steps in the guide to build a scalable and maintainable application with a monorepo approach.
+Follow the detailed steps in the guide at [medium.com](https://lehcode.medium.com/how-to-create-a-monorepo-with-multiple-services-using-lerna-and-yarn-db7bbc345bac) to build a scalable and maintainable application with a monorepo approach.
