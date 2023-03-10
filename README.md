@@ -1,6 +1,10 @@
 # Building Scalable and Maintainable Applications with a Monorepo Approach
 
-A repository for guide at 
+The ultimate guide for building a full-stack web application using NestJS, Yarn workspaces, and NX! In this guide, you will learn how to set up initial folder structure of your project, manage dependencies with Yarn workspaces, and utilize version control with NX. We will also cover how to add NestJS as an API service, serve client requests.
+
+But that's not all! We will dive even deeper into creating shared libraries, adding Angular application as an admin frontend. Lastly, we'll generalize all configurations using docker-compose.yml.
+
+This guide is perfect for developers looking to build a scalable and efficient full-stack web application using the latest technologies. Let's get started!
 
 The guide covers:
  - Initial setup and directory structure
