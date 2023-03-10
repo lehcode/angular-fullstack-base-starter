@@ -1,0 +1,13 @@
+*.tar
+*.bak
+*.new
+*~
+.git
+node_modules
+npm-debug.log
+Dockerfile
+.gitignore
+.dockerignore
+.angular
+.idea
+.vscode
