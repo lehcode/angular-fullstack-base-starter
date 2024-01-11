@@ -1,7 +1,7 @@
 {
   "name": "@lehcode/root",
   "version": "1.0.0",
-  "description": "A monorepository with multiple services using Lerna, Yarn and NX.",
+  "description": "A mono-repository with multiple services using Lerna, Yarn and NX.",
   "main": "index.js",
   "author": "Anton Repin<lehcode@gmail.com>",
   "license": "UNLICENSED",
@@ -14,16 +14,16 @@
     "lint": "npx lerna exec --scope={@lehcode/api,@lehcode/admin} -- yarn lint"
   },
   "devDependencies": {
-    "@nrwl/angular": "^15.8.5",
-    "@nrwl/jest": "^15.8.5",
-    "@nrwl/nest": "^15.8.5",
-    "@nrwl/workspace": "^15.8.5",
-    "lerna": "^6.5.1"
+    "lerna": "^8.0.2"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
-    "@tsconfig/recommended": "^1.0.2"
+    "@nx/angular": "^17.2.8",
+    "@nx/jest": "^17.2.8",
+    "@nx/nest": "^17.2.8",
+    "@nx/workspace": "^17.2.8",
+    "@tsconfig/recommended": "^1.0.3"
   }
 }

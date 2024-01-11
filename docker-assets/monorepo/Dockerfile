@@ -52,7 +52,7 @@ RUN if [ "${DEBUG}" != "yes" ]; then set -e; else set -ex && env; fi \
     && apt-get clean > /dev/null \
     # Install global packages and set configuration options
     && echo "Installing global packages" \
-    && yarn global add @nestjs/cli@${NESTJS_VERSION} npm@${NPM_VERSION} lerna@latest \
+    && yarn global add @nestjs/cli npm lerna nx @nx/nest @nx/angular @nx/workspace \
     && npm config --global set update-notifier false \
     && echo "NodeJS: $(node -v)" \
     && echo "NPM: v$(npm --version)" \
