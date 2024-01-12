@@ -14,16 +14,16 @@
     "lint": "npx lerna exec --scope={@lehcode/api,@lehcode/admin} -- yarn lint"
   },
   "devDependencies": {
-    "lerna": "^8.0.2",
-    "@tsconfig/recommended": "^1.0.3"
+    "lerna": "^8.0.2"
   },
   "workspaces": [
-    "packages/*",
-    "libraries/*"
+    "packages/*"
   ],
   "dependencies": {
+    "@nx/angular": "^17.2.8",
     "@nx/jest": "^17.2.8",
     "@nx/nest": "^17.2.8",
-    "@nx/workspace": "^17.2.8"
+    "@nx/workspace": "^17.2.8",
+    "@tsconfig/recommended": "^1.0.3"
   }
 }

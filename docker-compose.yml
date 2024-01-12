@@ -3,7 +3,7 @@ services:
   # monorepo service
   monorepo:
     # image name and version based on environment variables
-    image: monorepo-node_v${USE_NODE_VERSION:-18.14.1}
+    image: mono-node_v${USE_NODE_VERSION:-18.14.1}-nestjs_v${USE_NESTJS_VERSION:-9.2.0}
     # container name
     container_name: monorepo
     # command to run on container startup
@@ -15,6 +15,8 @@ services:
       # build arguments based on environment variables
       args:
         NODE_VERSION: ${USE_NODE_VERSION:-18.14.1}
+        NPM_VERSION: ${USE_NPM_VERSION:-9.3.1}
+        NESTJS_VERSION: ${USE_NESTJS_VERSION:-9.2.0}
         USER: ${HOST_USER:?Specify HOST_USER environment variable}
         UID: ${HOST_UID:?Specify HOST_UID environment variable}
         GROUP: ${HOST_DOCKER_GROUP:?Specify HOST_DOCKER_GROUP environment variable}

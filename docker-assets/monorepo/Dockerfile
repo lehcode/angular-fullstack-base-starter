@@ -13,6 +13,10 @@ LABEL org.opencontainers.image.copyright="Anton Repin"
 LABEL org.opencontainers.image.description="Backend image with NestJS"
 
 # Set debug mode, user, user ID, group, group ID, and monorepo root as arguments
+ARG NESTJS_VERSION
+ENV NESTJS_VERSION=${NESTJS_VERSION}
+ARG NPM_VERSION
+ENV NPM_VERSION=${NPM_VERSION}
 ARG DEBUG
 ENV DEBUG=${DEBUG}
 ARG USER
@@ -28,7 +32,7 @@ ENV MONOREPO_ROOT=${MONOREPO_ROOT}
 
 # Set debugging options and output versions of Node and NPM
 RUN if [ "${DEBUG}" != "yes" ]; then set -e; else set -ex && env; fi \
-	&& echo "Building backend service image using\n\tNode.js: v${NODE_VERSION}\n" \
+	&& echo "Building backend service image using\n\tNode.js: v${NODE_VERSION}\n\tNPM: v${NPM_VERSION}\n" \
 	# Map privileges from host to image
 	&& echo "Mapping privileges from host\n\tuser: ${USER}(${UID})\n\tgroup: ${GROUP}(${GID})" \
     && groupmod -g 1111 node && usermod -u 1111 -g 1111 node \
@@ -42,13 +46,13 @@ RUN if [ "${DEBUG}" != "yes" ]; then set -e; else set -ex && env; fi \
     && echo "Installing necessary applications" \
     && apt-get update > /dev/null \
     && apt-get upgrade -y > /dev/null \
-    && apt-get install -y --no-install-recommends --no-install-suggests sudo yarn less nano > /dev/null \
+    && apt-get install -y --no-install-recommends --no-install-suggests sudo yarn netcat less nano > /dev/null \
     && echo "${USER}\t\tALL=(ALL:ALL)\tNOPASSWD:ALL" | tee --append /etc/sudoers > /dev/null \
     && echo "Cleaning up" \
     && apt-get clean > /dev/null \
     # Install global packages and set configuration options
     && echo "Installing global packages" \
-    && yarn global add @nestjs/cli npm lerna nx @nx/nest @nx/angular @nx/workspace npm-check-updates \
+    && yarn global add @nestjs/cli npm lerna nx @nx/nest @nx/angular @nx/workspace \
     && npm config --global set update-notifier false \
     && echo "NodeJS: $(node -v)" \
     && echo "NPM: v$(npm --version)" \
