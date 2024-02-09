@@ -1,1 +1,1 @@
-# Artificial Intelligence Marketing System
+# Mono Repository Root Directory

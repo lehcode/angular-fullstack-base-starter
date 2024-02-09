@@ -14,15 +14,15 @@
     "lint": "npx lerna exec --scope={@lehcode/api,@lehcode/admin} -- yarn lint"
   },
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.3",
     "@babel/runtime": "^7.23.8",
-    "lerna": "^8.0.2"
+    "@nrwl/workspace": "^18.0.3",
+    "@tsconfig/recommended": "^1.0.3",
+    "@types/node": "^20.11.17",
+    "lerna": "^8.0.2",
+    "typescript": "^5.3.3"
   },
   "workspaces": [
     "apps/*",
     "libs/*"
-  ],
-  "dependencies": {
-    "@nx/workspace": "^17.2.8"
-  }
+  ]
 }
