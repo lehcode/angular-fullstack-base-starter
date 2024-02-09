@@ -1,8 +1,8 @@
-node_modules/
-docker-token
+/**/node_modules/
 yarn-error.log
 .env
 dist/
-.angular
-.idea
-.vscode
+.angular/
+.idea/
+.vscode/
+_design/

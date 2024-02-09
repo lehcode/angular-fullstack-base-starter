@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A mono-repository with multiple services using Lerna, Yarn and NX.",
   "main": "index.js",
-  "author": "Anton Repin<lehcode@gmail.com>",
+  "author": "lehcode<53556648+lehcode@users.noreply.github.com>",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
@@ -19,8 +19,8 @@
     "@babel/runtime": "^7.23.8"
   },
   "workspaces": [
-    "packages/*",
-    "libraries/*"
+    "apps/*",
+    "libs/*"
   ],
   "dependencies": {}
 }
