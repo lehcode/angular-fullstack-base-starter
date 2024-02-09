@@ -15,12 +15,14 @@
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
-    "lerna": "^8.0.2",
-    "@babel/runtime": "^7.23.8"
+    "@babel/runtime": "^7.23.8",
+    "lerna": "^8.0.2"
   },
   "workspaces": [
     "apps/*",
     "libs/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@nx/workspace": "^17.2.8"
+  }
 }
